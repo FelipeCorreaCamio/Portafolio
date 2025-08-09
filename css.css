@@ -6,68 +6,95 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #173947;
-  background: linear-gradient(90deg, rgba(23, 57, 71, 1) 0%, rgba(21, 41, 59, 1) 49%, rgba(26, 53, 92, 1) 100%);
+    background: #000000;
+background: linear-gradient(92deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header {
-  background: #111;
-  color: white;
-}
+
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar a{
+    position: relative;
+    font-weight: 1000;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: .5s;
+    color:#111
+    
 }
-.logo span {
-  color: #ff4b2b;
+
+.navbar a:hover{
+    color: rgb(208, 42, 86);
 }
+
+.navbar a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid rgb(208, 42, 86);
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover span{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
-  list-style: none;
+  gap: 1rem;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ff4b2b;
-}
-
-/* Botón menú móvil */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  color: #fff;
 }
 
+.contenedor-centro
 /* Responsivo */
 @media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #111;
+ .nav-links {
+    text-align: center;
     flex-direction: column;
-    width: 200px;
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(1, 1, 1, 0.95);
     padding: 1rem;
+    border-radius: 10px;
+
+    /* Oculto por defecto */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none; /* Evita clics cuando está oculto */
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
+  /* Cuando está activo */
   .nav-links.show {
-    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .menu-toggle {
