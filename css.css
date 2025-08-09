@@ -1,3 +1,6 @@
+/* FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+/* FONTS*/
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +10,7 @@
 body {
   font-family: Arial, sans-serif;
     background: #000000;
-background: linear-gradient(92deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);  display: flex;
+    background: linear-gradient(92deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);
   justify-content: center;
   align-items: center;
 }
@@ -17,7 +20,7 @@ background: linear-gradient(92deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 33%, rg
 .navbar {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -70,34 +73,82 @@ background: linear-gradient(92deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 33%, rg
   color: #fff;
 }
 
-.contenedor-centro
+.contenedor-centro{
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centra horizontalmente el cartel */
+    margin-top: 100px; /* separación respecto al menú */
+    position: relative; /* evita que hijos absolute interfieran con otros */
+    z-index: 1; /* asegura que esté sobre fondos o decoraciones */
+     height: auto; 
+}
+
+.cartel {
+    width: 100%; /* no ocupa todo el ancho */
+     height: auto;     
+    background-color: #070707; /* fondo */
+    color: white; /* texto */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: 8vw;
+box-shadow: rgba(44, 6, 6, 0.194) 0px 0px 0px 2px, rgba(44, 6, 6, 0.4) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    display: block;
+    position: relative; 
+}
+
+.cartel hr{
+    position: relative;
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+     border:2px solid white;
+}
+.cartel .hr-dos{
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
 /* Responsivo */
 @media (max-width: 768px) {
- .nav-links {
-    text-align: center;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: rgba(1, 1, 1, 0.95);
-    padding: 1rem;
-    border-radius: 10px;
+    .nav-links {
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(1, 1, 1, 0.95);
+        padding: 1rem;
+        border-radius: 10px;
+        position: absolute; /* o relative, según tu estructura */
+        z-index: 10; /* número mayor que el z-index del cartel */
+        /* otros estilos que tengas */
 
-    /* Oculto por defecto */
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none; /* Evita clics cuando está oculto */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+        /* Oculto por defecto */
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none; /* Evita clics cuando está oculto */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
-  /* Cuando está activo */
-  .nav-links.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
+    /* Cuando está activo */
+    .nav-links.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+        display: block;
+    }
+
+    .cartel {
+        font-size: 7vw; /* más pequeño en pantallas chicas */
+        padding: 10px;
+    }
+
+    .contenedor-centro {
+        margin-top: 50px;
+    }
 }
