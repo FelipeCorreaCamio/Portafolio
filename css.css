@@ -27,6 +27,7 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
 }
 
 .navbar a{
@@ -233,11 +234,60 @@ body {
       filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
 
 }
-    .cartel .box-redes .red i {
-    font-size: 7vh;
-    transform-origin: center center;
-    transform: scale(1);
-    filter: drop-shadow(0 4px 6px rgba(38, 57, 77, 0.468));
+    .cartel .box-redes {
+        margin-left: 10vh;
+        margin-top: 3vh;
+        gap: 3vh;
+        flex-wrap: wrap; /* allows wrapping if needed */
+    }
 
+    .cartel .box-redes .red i {
+        font-size: 5vh;
+    }
 }
+
+/* Esto para mi CELULAR */
+@media (max-width: 390px) {
+    .cartel {
+        padding: 0.8vh;
+        font-size: 8vw;
+    }
+
+    .contenedor-centro {
+        margin-top: 3vh;
+    }
+
+    .cartel .parrafo-uno,
+    .cartel .parrafo-dos {
+        margin-left: 2vh;
+        font-size: 4vw;
+    }
+
+    .cartel .box-redes {
+        margin-left: 5vh;
+        margin-top: 2vh;
+        gap: 2vh;
+        flex-wrap: wrap;
+    }
+
+    .cartel .box-redes .red i {
+        font-size: 4vh;
+    }
+
+    .cartel hr{
+        width: 15%;
+        margin-left: 2vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        border-width: 0.25vh;
+    }
+
+     
+    .cartel .hr-dos {
+        width: 30%;
+        margin-left: 2vh;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        border-width: 0.25vh;
+    }
 }
