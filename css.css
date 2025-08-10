@@ -182,7 +182,6 @@ body {
     transform: scale(1.2); /* aumenta 20% */
     cursor: pointer;
     filter: drop-shadow(0 6px 10px rgba(38, 57, 77, 0.502));
-      background: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 
 }
 
@@ -227,10 +226,18 @@ body {
     .contenedor-centro {
         margin-top: 6.25vh; /* 50px ≈ 6.25vh */
     }
+    
+    .cartel .parrafo-dos span{
+    color: rgb(231, 33, 33);
+    font-weight: bold;
+      filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
 
+}
     .cartel .box-redes .red i {
     font-size: 7vh;
     transform-origin: center center;
     transform: scale(1);
+    filter: drop-shadow(0 4px 6px rgba(38, 57, 77, 0.468));
+
 }
 }
