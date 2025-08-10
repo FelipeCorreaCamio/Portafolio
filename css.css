@@ -1,293 +1,520 @@
-/* FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
-
-/* FONTS*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-    background: #000000;
-    background: linear-gradient(92deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);
-    justify-content: center;
-    align-items: center;
-    height: 300vh;
-}
+    /* FONTS*/
+    @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
-.navbar {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    
-}
-
-.navbar a{
-    position: relative;
-    font-weight: 1000;
-    font-size: 1.1em;
-    text-decoration: none;
-    padding: 0.75vh 2.5vh;
-    transition: .5s;
-    color:#111
-    
-}
-
-.navbar a:hover{
-    color: rgb(208, 42, 86);
-}
-
-.navbar a span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-bottom: 0.25vh solid rgb(208, 42, 86);
-    border-radius: 1.875vh;
-    transform: scale(0) translateY(50px);
-    opacity: 0;
-    transition: .5s;
-}
-
-.navbar a:hover span{
-    transform: scale(1) translateY(0);
-    opacity: 1;
-}
-
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-.contenedor-centro{
-    width: 100%;
-    display: flex;
-    justify-content: center; /* centra horizontalmente el cartel */
-    margin-top: 12.5vh; /* separación respecto al menú */
-    position: relative; /* evita que hijos absolute interfieran con otros */
-    z-index: 1; /* asegura que esté sobre fondos o decoraciones */
-     height: auto; 
-}
-
-.cartel {
-    width: 100%; /* no ocupa todo el ancho */
-     height: auto;     
-    background-color: #000000; /* fondo */
-    color: white; /* texto */
-    padding: 1.875vh;
-    border-radius: 1vh;
-    position: relative; 
-}
-
-.cartel hr{
-    position: relative;
-    width: 10%;
-    margin-top: 3.75vh;
-    border:0.35vh solid white;
-    margin-left: 6.25vh;
-}
-.cartel .hr-dos{
-    width: 15%;
-    margin-top: 0vh;
-    margin-bottom: 4.44vh;
-}
-
-.cartel .texto-prede {
-    text-align: left;
-      
-}
-.cartel .parrafo-uno{
-     margin-left: 6.25vh;
-    font-family: "Boldonse", system-ui;
-    font-weight: 400;
-    font-style: normal;   
-    font-size: 8vw;
-}
-
-.cartel .parrafo-dos{
-    margin-left: 6.25vh;
-    font-family: "Gabarito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.6vw;
-
-    
-}
-.cartel .parrafo-dos span{
-    color: rgb(231, 33, 33);
-    font-weight: bold;
-      filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
-
-}
-
-.cartel .parrafo-dos .titulos{
-    font-weight: normal;
-    font-style: italic;
-    color: #5e5e5e;
-    filter: none;
-}
-
-.cartel .box-redes{
-    
-    width: max-content;
-    height: max-content;
-    margin-left: 10vh;
-    margin-top: 5vh;
-    display: flex;          
-    gap: 7vh;    
-}
-
-.cartel .box-redes .red{
-    background-color: none;
-    border-radius: 1vh;
-    width: max-content;
-    height: max-content;
-    transition: transform 0.4s ease;
-    transform: scale(1);
-
-}
-
-.cartel .box-redes a{
-    all: unset;
-}
-
-.cartel .box-redes .red i {
-    font-size: 10vh;
-    transform-origin: center center;
-    transform: scale(1);
-    filter: drop-shadow(0 4px 6px rgba(38, 57, 77, 0.468));
-
-}
-
-
-.cartel .box-redes .red:hover  {
-    transform: scale(1.2); /* aumenta 20% */
-    cursor: pointer;
-    filter: drop-shadow(0 6px 10px rgba(38, 57, 77, 0.502));
-
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .nav-links {
-        text-align: center;
-        flex-direction: column;
-        position: absolute;
-        top: 8.75vh;        /* 70px ≈ 8.75vh */
-        right: 2.5vh;       /* 20px ≈ 2.5vh */
-        background: rgba(1, 1, 1, 0.95);
-        padding: 1rem;
-        border-radius: 1.25vh;  /* 10px ≈ 1.25vh */
-        position: absolute; /* o relative, según tu estructura */
-        z-index: 10; /* número mayor que el z-index del cartel */
-        /* otros estilos que tengas */
-
-        /* Oculto por defecto */
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none; /* Evita clics cuando está oculto */
-        transition: opacity 0.3s ease, transform 0.3s ease;
+    /* FONTS*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     }
 
-    /* Cuando está activo */
-    .nav-links.show {
+    body {
+        font-family: "Roboto", sans-serif;
+        align-items: center;
+        height: 300vh;
+        background-image: linear-gradient(to right bottom, #000000, #010101, #020202, #030303, #040404);
+
+    }
+
+
+
+    .navbar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        
+    }
+
+    .navbar a{
+        position: relative;
+        font-weight: 1000;
+        font-size: 1.1em;
+        text-decoration: none;
+        padding: 0.75vh 2.5vh;
+        transition: .5s;
+        color:#111
+        
+    }
+
+    .navbar a:hover{
+        color: rgb(208, 42, 86);
+    }
+
+    .navbar a span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-bottom: 0.25vh solid rgb(208, 42, 86);
+        border-radius: 1.875vh;
+        transform: scale(0) translateY(50px);
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .navbar a:hover span{
+        transform: scale(1) translateY(0);
         opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
+    }
+
+
+    .nav-links {
+    display: flex;
+    gap: 1rem;
     }
 
     .menu-toggle {
-        display: block;
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+    }
+
+    .contenedor-centro{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 8vh; /* separación respecto al menú */
+        position: relative; /* evita que hijos absolute interfieran con otros */
+        z-index: 1; /* asegura que esté sobre fondos o decoraciones */
+        height: auto; 
+        
     }
 
     .cartel {
-        font-size: 7vw; /* más pequeño en pantallas chicas */
-        padding: 1.25vh;  /* 10px ≈ 1.25vh */
-    }
+        width: 100%; /* no ocupa todo el ancho */
+        height: auto;     
+        color: white; /* texto */
+        padding: 1.875vh;
+        border-radius: 1vh;
+        position: relative; 
 
-    .contenedor-centro {
-        margin-top: 6.25vh; /* 50px ≈ 6.25vh */
-    }
-    
-    .cartel .parrafo-dos span{
-    color: rgb(231, 33, 33);
-    font-weight: bold;
-      filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
-
-}
-    .cartel .box-redes {
-        margin-left: 10vh;
-        margin-top: 3vh;
-        gap: 3vh;
-        flex-wrap: wrap; /* allows wrapping if needed */
-    }
-
-    .cartel .box-redes .red i {
-        font-size: 5vh;
-    }
-}
-
-/* Esto para mi CELULAR */
-@media (max-width: 390px) {
-    .cartel {
-        padding: 0.8vh;
-        font-size: 8vw;
-    }
-
-    .contenedor-centro {
-        margin-top: 3vh;
-    }
-
-    .cartel .parrafo-uno,
-    .cartel .parrafo-dos {
-        margin-left: 2vh;
-        font-size: 4vw;
-    }
-
-    .cartel .box-redes {
-        margin-left: 5vh;
-        margin-top: 2vh;
-        gap: 2vh;
-        flex-wrap: wrap;
-    }
-
-    .cartel .box-redes .red i {
-        font-size: 4vh;
     }
 
     .cartel hr{
+        position: relative;
+        width: 10%;
+        margin-top: 3.75vh;
+        border:0.35vh solid white;
+        margin-left: 6.25vh;
+    }
+    .cartel .hr-dos{
         width: 15%;
-        margin-left: 2vh;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        border-width: 0.25vh;
+        margin-top: 0vh;
+        margin-bottom: 4.44vh;
+        margin-left: 6.25vh;
     }
 
-     
-    .cartel .hr-dos {
-        width: 30%;
-        margin-left: 2vh;
-        margin-top: 1vh;
-        margin-bottom: 2vh;
-        border-width: 0.25vh;
+    .cartel .texto-prede {
+        text-align: left;
+        
     }
-}
+    .cartel .parrafo-uno{
+        margin-left: 6.25vh;
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;   
+        font-size: 6vw;
+    }
+
+    .cartel .parrafo-dos{
+        margin-left: 6.25vh;
+        font-family: "Gabarito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.0vw;
+
+        
+    }
+    .cartel .parrafo-dos span{
+        color: rgb(231, 33, 33);
+        font-weight: bold;
+        filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
+
+    }
+
+    .cartel .parrafo-dos .titulos{
+        font-weight: normal;
+        font-style: italic;
+        color: #5e5e5e;
+        filter: none;
+    }
+
+    .cartel .box-redes{
+        
+        width: max-content;
+        height: max-content;
+        margin-left: 10vh;
+        margin-top: 5vh;
+        display: flex;          
+        gap: 7vh;    
+    }
+
+    .cartel .box-redes .red{
+        background-color: none;
+        border-radius: 1vh;
+        width: max-content;
+        height: max-content;
+        transition: transform 0.4s ease;
+        transform: scale(1);
+        
+    }
+
+    .cartel .box-redes a{
+        all: unset;
+    }
+
+    .cartel .box-redes .red i {
+        font-size: 10vh;
+        transform-origin: center center;
+        transform: scale(1);
+        filter: drop-shadow(0 4px 6px rgba(38, 57, 77, 0.468));
+
+    }
+
+
+    .cartel .box-redes .red:hover  {
+        transform: scale(1.2); /* aumenta 20% */
+        cursor: pointer;
+        filter: drop-shadow(0 6px 10px rgba(38, 57, 77, 0.502));
+
+    }
+
+    .cartel .box-imagen {
+        position: absolute;
+        top: 30%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        width: 30vw; /* ajusta según tu imagen */
+        height: auto; /* mantiene la proporción */
+        z-index: 10; /* detrás del texto */
+        animation: cofre-subir-bajar 1s ease-in-out infinite alternate; /* animación de subir y bajar */
+    
+    }
+    .cartel .box-imagen.dos{
+        filter: none;
+        height: max-content;
+        top: 0%;
+        left: 75%;
+        width: 20vh;
+    }
+    .cartel .box-imagen.dos img{
+        filter: none;
+    }
+    .cartel .box-imagen a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .cartel .box-imagen img {
+        width: 100%; /* ocupa todo el contenedor */
+        height: auto; /* mantiene la proporción */
+        filter: drop-shadow(0 6px 10px rgb(77, 38, 38));
+        transition: transform 0.3s ease; /* suaviza la transición */
+
+
+    }
+    .cartel .box-imagen img:hover {
+        transform: scale(1.05) translateY(30px) rotate(-10deg);
+        filter: drop-shadow(0 12px 20px rgb(77, 38, 38));
+        transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55), filter 0.3s;
+        animation: shake-confetti 1s infinite alternate-reverse;
+        
+    }
+
+    @keyframes shake-confetti {
+        0% { transform: scale(1.05) translateY(0) rotate(0deg);}
+        20% { transform: scale(1.05) translateY(10px) rotate(-5deg);}
+        40% { transform: scale(1.05) translateY(20px) rotate(5deg);}
+        60% { transform: scale(1.05) translateY(25px) rotate(-10deg);}
+        80% { transform: scale(1.05) translateY(30px) rotate(10deg);}
+        100% { transform: scale(1.05) translateY(30px) rotate(-10deg);}
+    }
+
+    @keyframes cofre-subir-bajar {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-2.5vh);
+        }
+    }
+
+    .sobre-mi {
+        position: relative;
+        margin-top: 20vh;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        height: max-content;
+        padding: 4vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .sobre-mi .sobre-mi-box {
+        padding: 2rem;
+        background-color: lightgray;
+        background-color: blue;
+        height: max-content;
+    }
+    .sobre-mi .contenedor-texto {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem;
+        background-color: rgb(180, 180, 180);
+        border-radius: 2vh;
+        font-weight: 100vh;
+
+    }
+    .sobre-mi h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    .sobre-mi p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .nav-links {
+            text-align: center;
+            flex-direction: column;
+            position: absolute;
+            top: 8.75vh;        /* 70px ≈ 8.75vh */
+            right: 2.5vh;       /* 20px ≈ 2.5vh */
+            background: rgba(1, 1, 1, 0.95);
+            padding: 1rem;
+            border-radius: 1.25vh;  /* 10px ≈ 1.25vh */
+            position: absolute; /* o relative, según tu estructura */
+            z-index: 10; /* número mayor que el z-index del cartel */
+            /* otros estilos que tengas */
+
+            /* Oculto por defecto */
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none; /* Evita clics cuando está oculto */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Cuando está activo */
+        .nav-links.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .cartel {
+            font-size: 7vw; /* más pequeño en pantallas chicas */
+            padding: 1.25vh;  /* 10px ≈ 1.25vh */
+        }
+
+        .contenedor-centro {
+            margin-top: 6.25vh; /* 50px ≈ 6.25vh */
+        }
+        
+        .cartel .parrafo-dos span{
+        color: rgb(231, 33, 33);
+        font-weight: bold;
+        filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
+
+    }
+        .cartel .box-redes {
+            margin-left: 0;
+            margin-top: 3vh;
+            gap: 3vh;
+            flex-wrap: wrap; /* allows wrapping if needed */
+        }
+
+        .cartel .box-redes .red i {
+            font-size: 5vh;
+        }
+
+        .contenedor-centro {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 6.25vh;
+        }
+        .cartel {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cartel .parrafo-uno {
+        margin-left: 0;
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;   
+        font-size: 6vw;
+    }
+
+    .cartel .parrafo-dos {
+        margin-left: 0;
+        font-family: "Gabarito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.0vw;
+    }
+    .cartel hr {
+        position: relative;
+        width: 10%;
+        margin-top: 3.75vh;
+        border:0.35vh solid white;
+        margin-left: 0;
+    }
+    .cartel .hr-dos {
+        width: 15%;
+        margin-top: 0vh;
+        margin-bottom: 4.44vh;
+        margin-left: 0;
+    }
+        .cartel .box-redes,
+        .cartel .box-imagen,
+        .cartel .box-imagen.dos {
+            margin-left: 0;
+            margin-top: 2vh;
+            align-self: center;
+            position: static;
+            width: 70vw;
+            max-width: 220px;
+        }
+        .cartel .box-imagen.dos{
+        filter: none;
+        height: max-content;
+        top: 0%;
+        left: 75%;
+        width: 10vh;
+    }
+    .cartel .box-imagen{
+        filter: none;
+        height: max-content;
+        top: 0%;
+        left: 75%;
+        width: 18vh;
+    }
+    .sobre-mi {
+        
+            margin-top: 5vh;
+        
+        }
+    }
+
+    /* Esto para mi CELULAR */
+    @media (max-width: 390px) {
+        .cartel {
+            padding: 0.8vh;
+            font-size: 8vw;
+        }
+
+        .contenedor-centro {
+            margin-top: 3vh;
+        }
+
+        .cartel .parrafo-uno,
+        .cartel .parrafo-dos {
+            margin-left: 0;
+            margin-left: 2vh;
+            font-size: 4vw;
+        }
+
+        .cartel .box-redes {
+            margin-left: 0;
+            margin-top: 2vh;
+            gap: 2vh;
+            flex-wrap: wrap;
+        }
+
+        .cartel .box-redes .red i {
+            font-size: 4vh;
+        }
+
+        .cartel hr{
+            width: 15%;
+            margin-left: 0;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            border-width: 0.25vh;
+        }
+
+        
+        .cartel .hr-dos {
+            width: 30%;
+            margin-left: 0;
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            border-width: 0.25vh;
+        }
+
+        .contenedor-centro {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3vh;
+            
+        }
+        .cartel {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cartel .parrafo-uno {
+        margin-left: 0;
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;   
+        font-size: 6vw;
+    }
+        .cartel .parrafo-dos{
+            margin-left: 0;
+            text-align: center;
+        }
+        .cartel .box-redes,
+        .cartel .box-imagen,
+        .cartel .box-imagen.dos {
+            margin-left: 0;
+            margin-top: 3vh;
+            align-self: center;
+            position: static;
+            width: 90vw;
+            max-width: 150px;
+        }
+    .cartel .box-imagen.dos{
+        filter: none;
+        height: max-content;
+        top: 0%;
+        left: 75%;
+        width: 10vh;
+    }
+    .cartel .box-imagen{
+        filter: none;
+        height: max-content;
+        top: 0%;
+        left: 75%;
+        width: 18vh;
+    }
+        .sobre-mi {
+        
+            margin-top: 5vh;
+        
+        }
+    }
