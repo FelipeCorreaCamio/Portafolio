@@ -1,4 +1,4 @@
-    /* FONTS*/
+/* FONTS*/
     @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -15,7 +15,7 @@
         font-family: "Roboto", sans-serif;
         align-items: center;
         height: 300vh;
-        background-image: linear-gradient(to right bottom, #000000, #010101, #020202, #030303, #040404);
+        background-image: linear-gradient(to right bottom, #000000, #020000, #020202, #030303, #040404);
 
     }
 
@@ -264,19 +264,19 @@
         gap: 2rem;
     }
     .sobre-mi .sobre-mi-box {
-        padding: 2rem;
-        background-color: lightgray;
-        background-color: blue;
+        padding: 0.5rem;
         height: max-content;
+        justify-items: center;
     }
     .sobre-mi .contenedor-texto {
         max-width: 1200px;
         margin: 0 auto;
         padding: 3rem;
-        background-color: rgb(180, 180, 180);
+        background-color: rgb(212, 212, 212);
         border-radius: 2vh;
         font-weight: 100vh;
-
+         font-size: 1.25rem;
+        line-height: 1.5;
     }
     .sobre-mi h2 {
         font-size: 2.5rem;
@@ -284,9 +284,119 @@
         font-weight: bold;
     }
 
-    .sobre-mi p {
-        font-size: 1.25rem;
-        line-height: 1.5;
+   
+    .sobre-mi .icono {
+        font-size: 20vh;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        width: max-content;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.5vh solid #222;      /* Circular border */
+        border-radius: 50%;            /* Makes it circular */
+        padding: 5vh;                  /* Space between icon and border */
+        background: #fff;              /* Optional: white background */
+        box-shadow: 0 2px 8px rgb(0, 0, 0); /* Optional: subtle shadow */
+    }
+  
+    .sobre-mi .icono h2 {
+        margin-top: -10vh;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        font-weight: bold;
+        color: black;
+    }
+
+    .sobre-mi .contenedor-detalles {
+        height: max-content;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2vh;
+
+    }
+
+    .sobre-mi .contenedor-detalles .box-detalle {
+        padding: 1rem;
+        border-radius: 0.5rem;
+         display: grid;
+        grid-template-rows:  1fr auto; /* título arriba, íconos abajo */
+      height: max-content;
+      width: 100%;
+      
+
+    }
+
+
+       .sobre-mi .contenedor-detalles .box-detalle {
+        font-family: "Gabarito", sans-serif;
+  
+        align-items: center;
+
+    }
+    .box-detalle .box-skill.titulo {
+    width: 100%;
+    display: block; 
+    
+}
+   
+    .box-detalle .box-skill.titulo p { 
+        font-weight: bold;
+        font-size: 3vh;
+        text-decoration: underline;
+        text-align: center;
+     
+        
+    }
+    .box-detalle .skills-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6vh, 1fr));        
+        align-items: center;
+        justify-items: center;
+        gap: 3vh;
+        width: 100%;
+    }
+
+    .box-detalle .box-skill{
+        font-size: 4vh;
+        width: 8vh;
+        height: max-content;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .box-detalle .box-skill.box{
+        border: 1px solid black;
+        box-shadow: 
+                rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset,
+                rgba(0, 0, 0, 0.09) 0px 2px 1px,
+                rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;   
+        cursor: pointer;
+}
+
+.box-detalle .box-skill.box:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+        background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+    .caption {
+        text-decoration: none;
+        font-size: 1.5vh;
+
+        text-align: center;
+        color: #000000;
     }
 
     /* Responsivo */
