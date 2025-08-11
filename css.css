@@ -83,22 +83,33 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 8vh; /* separación respecto al menú */
         position: relative; /* evita que hijos absolute interfieran con otros */
         z-index: 1; /* asegura que esté sobre fondos o decoraciones */
         height: auto; 
         
     }
 
-    .cartel {
-        width: 100%; /* no ocupa todo el ancho */
-        height: auto;     
-        color: white; /* texto */
-        padding: 1.875vh;
-        border-radius: 1vh;
-        position: relative; 
+   .cartel {
+    width: 100%; /* no ocupa todo el ancho */
+    height: 100vh;     
+    color: white; /* texto */
+    padding: 1.875vh;
+    border-radius: 1vh;
+    position: relative; 
+    /* Quita background-image directo de aquí */
+}
 
-    }
+.cartel::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background-image: url(images/fondo-astetik.jpeg);
+    background-size: 150%;
+    background-position: center;
+    transform: scaleX(-1);
+    z-index: -1;
+    border-radius: 1vh; /* para que coincida con el div */
+}
 
     .cartel hr{
         position: relative;
@@ -254,7 +265,6 @@
 
     .sobre-mi {
         position: relative;
-        margin-top: 20vh;
         background: rgb(255, 255, 255);
         width: 100%;
         height: max-content;
@@ -399,6 +409,37 @@
         color: #000000;
     }
 
+    .contactos-list {
+        display: grid;
+        grid-template-columns: repeat(minmax(6vh, 1fr),auto-fit );
+        text-align: center;
+        gap: 2vh;
+        
+    }
+
+    .contactos-list a {
+        text-decoration: none;
+        color: inherit; /* hereda el color del padre */
+    }
+
+    .contactos-list .box-contacto {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        background-color: white;
+        transition: background-color 0.2s, color 0.3s, text-shadow 0.3s;
+        font-size: 3vh;
+
+    }
+
+    .contactos-list .box-contacto:hover {
+        background-color: red;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.607);
+    }
+
     /* Responsivo */
     @media (max-width: 768px) {
         .nav-links {
@@ -522,11 +563,7 @@
         left: 75%;
         width: 18vh;
     }
-    .sobre-mi {
-        
-            margin-top: 5vh;
-        
-        }
+ 
     }
 
     /* Esto para mi CELULAR */
