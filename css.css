@@ -103,10 +103,10 @@
     content: "";
     position: absolute;
     inset: 0; /* top:0; right:0; bottom:0; left:0; */
-    background-image: url(images/fondo-astetik.jpeg);
-    background-size: 150%;
+  background-image: url(images/fondo-2.png);
+    background-size: cover;
     background-position: center;
-    transform: scaleX(-1);
+    filter: opacity(0.5);
     z-index: -1;
     border-radius: 1vh; /* para que coincida con el div */
 }
@@ -150,15 +150,16 @@
     .cartel .parrafo-dos span{
         color: rgb(231, 33, 33);
         font-weight: bold;
-        filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.169));
+        filter: drop-shadow(0 4px 6px rgba(255, 0, 0, 0.393));
 
     }
 
     .cartel .parrafo-dos .titulos{
-        font-weight: normal;
+        font-weight: bold;
         font-style: italic;
         color: #5e5e5e;
-        filter: none;
+        filter: drop-shadow(0 4px 6px rgb(0, 0, 0));
+
     }
 
     .cartel .box-redes{
@@ -217,10 +218,11 @@
         height: max-content;
         top: 0%;
         left: 75%;
-        width: 20vh;
+        width: 25vh;
     }
     .cartel .box-imagen.dos img{
         filter: none;
+
     }
     .cartel .box-imagen a {
         display: block;
@@ -232,7 +234,7 @@
     .cartel .box-imagen img {
         width: 100%; /* ocupa todo el contenedor */
         height: auto; /* mantiene la proporción */
-        filter: drop-shadow(0 6px 10px rgb(77, 38, 38));
+        filter: drop-shadow(0 6px 10px rgb(255, 0, 0));
         transition: transform 0.3s ease; /* suaviza la transición */
 
 
@@ -509,13 +511,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: max-content;
         }
         .cartel .parrafo-uno {
         margin-left: 0;
         font-family: "Boldonse", system-ui;
         font-weight: 400;
         font-style: normal;   
-        font-size: 6vw;
+        font-size: 10vw;
     }
 
     .cartel .parrafo-dos {
@@ -524,7 +527,7 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-size: 2.0vw;
+        font-size: 3vw;
     }
     .cartel hr {
         position: relative;
@@ -535,9 +538,8 @@
     }
     .cartel .hr-dos {
         width: 15%;
-        margin-top: 0vh;
-        margin-bottom: 4.44vh;
         margin-left: 0;
+        margin-bottom: 1vh;
     }
         .cartel .box-redes,
         .cartel .box-imagen,
