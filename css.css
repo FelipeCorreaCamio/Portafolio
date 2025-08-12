@@ -631,21 +631,30 @@
         font-family: "Boldonse", system-ui;
         font-weight: 400;
         font-style: normal;   
-        font-size: 6vw;
+        font-size: 6.5vh;
     }
         .cartel .parrafo-dos{
             margin-left: 0;
             text-align: center;
+            font-size: 3vh;
+        }
+        .cartel .box-redes{
+            width: 50vh;
         }
         .cartel .box-redes,
         .cartel .box-imagen,
         .cartel .box-imagen.dos {
             margin-left: 0;
             margin-top: 3vh;
+            align-items: center;
+            justify-content: center;
             align-self: center;
             position: static;
             width: 90vw;
-            max-width: 150px;
+            max-width: 50vh;
+        }
+        .cartel .box-redes .red i{
+            font-size: 7vh;
         }
     .cartel .box-imagen.dos{
         filter: none;
@@ -662,8 +671,25 @@
         width: 18vh;
     }
         .sobre-mi {
-        
-            margin-top: 5vh;
-        
+            padding: 2vh;
+            grid-template-columns: 1fr; /* una sola columna */
+          min-height: 100vh;
+            
         }
+        .sobre-mi,
+    .sobre-mi .sobre-mi-box,
+    .sobre-mi .contenedor-texto,
+    .sobre-mi h2 {
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .sobre-mi .icono {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
     }
