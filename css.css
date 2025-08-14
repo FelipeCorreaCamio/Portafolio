@@ -268,7 +268,7 @@
     .sobre-mi {
          
         position: relative;
-    background: linear-gradient(132deg,rgb(216, 216, 216) 0%, rgba(255, 255, 255, 1) 26%, rgb(214, 214, 214) 45%, rgba(255, 255, 255, 1) 66%, rgba(222, 222, 222, 1) 83%, rgba(255, 255, 255, 1) 100%);        width: 100%;
+        background: linear-gradient(132deg,rgba(237, 237, 237, 1) 0%, rgba(255, 255, 255, 1) 26%, rgba(240, 240, 240, 1) 45%, rgba(255, 255, 255, 1) 66%, rgba(222, 222, 222, 1) 83%, rgba(255, 255, 255, 1) 100%);        width: 100%;
         height: max-content;
         padding: 4vh;
         display: grid;
@@ -290,8 +290,8 @@ background: linear-gradient(132deg,rgba(158, 0, 0, 1) 0%, rgba(226, 0, 0, 1) 32%
          font-size: 1.25rem;
         line-height: 1.5;
         color: white;
-        height: 37vw;
-                box-shadow: 0 2px 8px rgb(0, 0, 0); /* Optional: subtle shadow */
+        
+        box-shadow: 0 2px 8px rgb(0, 0, 0); /* Optional: subtle shadow */
 
     }
     .sobre-mi h2 {
@@ -357,6 +357,8 @@ background: linear-gradient(132deg,rgba(158, 0, 0, 1) 0%, rgba(226, 0, 0, 1) 32%
     display: block; 
     
 }
+
+
    
     .box-detalle .box-skill.titulo p { 
         font-weight: bold;
@@ -414,6 +416,41 @@ background: linear-gradient(132deg,rgba(158, 0, 0, 1) 0%, rgba(226, 0, 0, 1) 32%
         text-align: center;
         color: #000000;
     }
+
+                .skill-popup {
+        position: absolute;
+        background: #222;
+        color: #fff;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 999;
+        transform: translate(-50%, -10px);
+        max-width: 90vw;
+        word-wrap: break-word;
+        }
+
+        /* Barra de porcentaje */
+        .skill-bar {
+        width: 100%;
+        height: 12px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-top: 6px;
+        }
+
+        .skill-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #e21933 0%, #ff5e5e 100%);
+        border-radius: 6px;
+        transition: width 1s ease; /* animación */
+        }
+
 
     .contactos-list {
         display: grid;
@@ -696,4 +733,7 @@ background: linear-gradient(132deg,rgba(158, 0, 0, 1) 0%, rgba(226, 0, 0, 1) 32%
     justify-content: center;
     align-items: center;
 }
-    }
+    .skills-list, .box-skill.box, .box-skill {
+    pointer-events: auto;
+}
+}

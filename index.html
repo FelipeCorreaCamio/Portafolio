@@ -64,14 +64,14 @@
                     <div class="box-skill titulo"><p>Skills</p></div>
 
                         <div class="skills-list">
-                            <div class="box-skill box"><i class="fa-brands fa-html5"></i><p class="caption">HTML5</p></div>
-                            <div class="box-skill box"><i class="fa-brands fa-css3-alt"></i><p class="caption">CSS3</p></div>
-                            <div class="box-skill box"><i class="fa-brands fa-js"></i><p class="caption">JavaScript</p></div>
-                            <div class="box-skill box"><i class="fa-solid fa-database"></i><p class="caption">SQL</p></div>
-                            <div class="box-skill box"><i class="fa-brands fa-php"></i><p class="caption">PHP</p></div>
-                            <div class="box-skill box"><i class="fa-brands fa-python"></i><p class="caption">Python</p></div>
-                            <div class="box-skill box"><i class="fa-brands fa-java"></i><p class="caption">Java</p></div>
-                            <div class="box-skill box"><i class="fa-brands fa-bootstrap"></i><p class="caption">Bootstrap</p></div>
+                            <button class="box-skill box" data-skill="HTML5" data-percent="95%"><i class="fa-brands fa-html5"></i><p class="caption">HTML5</p></button>
+                            <button class="box-skill box" data-skill="CSS3" data-percent="95%"><i class="fa-brands fa-css3-alt"></i><p class="caption">CSS3</p></button>
+                            <button class="box-skill box" data-skill="JavaScript" data-percent="65%"><i class="fa-brands fa-js"></i><p class="caption">JavaScript</p></button>
+                            <button class="box-skill box" data-skill="SQL" data-percent="80%"><i class="fa-solid fa-database"></i><p class="caption">SQL</p></button>
+                            <button class="box-skill box" data-skill="PHP" data-percent="70%"><i class="fa-brands fa-php"></i><p class="caption">PHP</p></button>
+                            <button class="box-skill box" data-skill="Python" data-percent="70%"><i class="fa-brands fa-python"></i><p class="caption">Python</p></button>
+                            <button class="box-skill box" data-skill="Java" data-percent="75%"><i class="fa-brands fa-java"></i><p class="caption">Java</p></button>
+                            <button class="box-skill box" data-skill="Bootstrap" data-percent="78%"><i class="fa-brands fa-bootstrap"></i><p class="caption">Bootstrap</p></button>
 
                         </div>
 
@@ -94,6 +94,13 @@
         <p>Hola soy Felipe Correa, un apasionado por el análisis de datos y la ingeniería en sistemas. Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente. Buscando experiencia en proyectos reales y colaborativos.</p>
     </div>
    </section>
+
+   <div id="skillPopup" class="skill-popup">
+    <span id="skillText"></span>
+    <div class="skill-bar">
+        <div class="skill-fill"></div>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
