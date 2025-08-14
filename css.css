@@ -91,9 +91,10 @@
 
    .cartel {
     width: 100%; /* no ocupa todo el ancho */
-    height: 100vh;     
+    height: max-content;     
+   
     color: white; /* texto */
-    padding: 1.875vh;
+    padding-bottom: 35vh;
     border-radius: 1vh;
     position: relative; 
     /* Quita background-image directo de aquí */
@@ -482,7 +483,19 @@ background: linear-gradient(132deg,rgba(158, 0, 0, 1) 0%, rgba(226, 0, 0, 1) 32%
         cursor: pointer;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.607);
     }
+    @media (max-width: 1000px) {
+         .cartel {
+    width: 100%; /* no ocupa todo el ancho */
+    height: max-content;     
+   
+    color: white; /* texto */
+    padding-bottom: 20vh;
+    border-radius: 1vh;
+    position: relative; 
+    /* Quita background-image directo de aquí */
+}
 
+    }
     /* Responsivo */
     @media (max-width: 768px) {
         .nav-links {

@@ -16,7 +16,7 @@ skillButtons.forEach(button => {
     popup.style.left = rect.left + window.scrollX + rect.width / 2 + "px";
     popup.style.top = rect.top + window.scrollY - popup.offsetHeight - 10 + "px";
     popup.style.opacity = 1;
-    popup.style.pointerEvents = "auto";
+    popup.style.pointerEvents = "auto";  
     popup.style.transform = "translate(-50%, 0)";
   });
 });
